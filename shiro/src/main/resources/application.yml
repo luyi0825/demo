@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: shiro
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    data-username: root
+    data-password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:47.101.223.241:3306/shirotest?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true"
+mybatis-plus:
+  type-aliases-package: com.ly.shiro.dao.*
