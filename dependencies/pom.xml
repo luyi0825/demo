@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>dependencies</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <alibaba-druid.version>1.1.23</alibaba-druid.version>
+        <commons-lang3.version>3.11</commons-lang3.version>
+        <mybatis-plus.version>3.4.1</mybatis-plus.version>
+        <lombok.version>1.18.20</lombok.version>
+        <easyexcel.verion>2.2.8</easyexcel.verion>
+        <jsoup.verion>1.13.1</jsoup.verion>
+        <zookeeper.version>3.7.0</zookeeper.version>
+        <redisson.version>3.16.1</redisson.version>
+        <jedis.version>3.6.0</jedis.version>
+        <jackson.version>2.12.2</jackson.version>
+        <spring.version>5.3.9</spring.version>
+        <spring-boot.version>2.4.9</spring-boot.version>
+        <!--spring-cloud-alibaba的版本-->
+        <alibaba-cloud.version>2021.1</alibaba-cloud.version>
+        <!--spring-cloud的版本-->
+        <spring-cloud.version>2020.0.3</spring-cloud.version>
+        <!-- log4j2的版本-->
+        <okHttp.version>4.9.1</okHttp.version>
+        <hibernate-validator.version>6.1.2.Final</hibernate-validator.version>
+        <zookeeper.version>3.7.0</zookeeper.version>
+        <hutool.version>5.6.5</hutool.version>
+        <nacos-client.version>1.4.2</nacos-client.version>
+        <mybaits-plus.version>3.4.3</mybaits-plus.version>
+        <mysql.version>8.0.25</mysql.version>
+        <elasticsearch.version>7.9.3</elasticsearch.version>
+        <elasticjob.verion>3.0.0</elasticjob.verion>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.25</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
