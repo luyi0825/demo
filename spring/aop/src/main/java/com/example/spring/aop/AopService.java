@@ -8,13 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
  * aop service
  */
 @Service("aopService")
-public class AopService {
+public interface AopService  {
 
-    public void sayGood() {
-        System.out.println("good");
-    }
+    public void sayGood();
 
-    public void test() {
-        sayGood();
-    }
+    public void test();
 }

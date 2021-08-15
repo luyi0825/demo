@@ -13,7 +13,7 @@ public class AopServiceAspectj {
     /**
      * 切点
      */
-    @Pointcut("within(com.example.spring.aop.AopService))")
+    @Pointcut("within(com.example.spring.aop.AopServiceImpl))")
     public void cacheablePointcut() {
     }
 
