@@ -9,4 +9,7 @@ spring:
         ## 手动签收
         acknowledge-mode: manual
         prefetch: 10
+        batch-size:
     virtual-host: test
+    publisher-confirm-type: simple
+    publisher-returns: true
