@@ -20,7 +20,6 @@ import lombok.Data;
 
 import java.util.List;
 
-@Data
 public class ProducerNode {
     private String msgId;
     private String tags;
@@ -30,4 +29,76 @@ public class ProducerNode {
     private String groupName;
     private TraceNode traceNode;
     private List<TraceNode> transactionNodeList;
+
+    public String getMsgId() {
+        return msgId;
+    }
+
+    public ProducerNode setMsgId(String msgId) {
+        this.msgId = msgId;
+        return this;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public ProducerNode setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    public String getKeys() {
+        return keys;
+    }
+
+    public ProducerNode setKeys(String keys) {
+        this.keys = keys;
+        return this;
+    }
+
+    public String getOffSetMsgId() {
+        return offSetMsgId;
+    }
+
+    public ProducerNode setOffSetMsgId(String offSetMsgId) {
+        this.offSetMsgId = offSetMsgId;
+        return this;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public ProducerNode setTopic(String topic) {
+        this.topic = topic;
+        return this;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public ProducerNode setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+
+    public TraceNode getTraceNode() {
+        return traceNode;
+    }
+
+    public ProducerNode setTraceNode(TraceNode traceNode) {
+        this.traceNode = traceNode;
+        return this;
+    }
+
+    public List<TraceNode> getTransactionNodeList() {
+        return transactionNodeList;
+    }
+
+    public ProducerNode setTransactionNodeList(List<TraceNode> transactionNodeList) {
+        this.transactionNodeList = transactionNodeList;
+        return this;
+    }
 }

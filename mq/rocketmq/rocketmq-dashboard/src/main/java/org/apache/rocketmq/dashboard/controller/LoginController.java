@@ -42,7 +42,7 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping("/login")
 public class LoginController {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Resource
     private RMQConfigure configure;
@@ -81,8 +81,7 @@ public class LoginController {
             WebUtil.setSessionValue(request, WebUtil.USER_INFO, userInfo);
             WebUtil.setSessionValue(request, WebUtil.USER_NAME, username);
             userInfo.setSessionId(WebUtil.getSessionId(request));
-            LoginResult result = new LoginResult(username, user.getType(), contextPath);
-            return result;
+            return new LoginResult(username, user.getType(), contextPath);
         }
     }
 

@@ -16,16 +16,17 @@
  */
 package org.apache.rocketmq.dashboard.admin;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.pool2.PooledObject;
 import org.apache.commons.pool2.PooledObjectFactory;
 import org.apache.commons.pool2.impl.DefaultPooledObject;
 import org.apache.rocketmq.common.protocol.body.ClusterInfo;
 import org.apache.rocketmq.tools.admin.MQAdminExt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Slf4j
 public class MQAdminPooledObjectFactory implements PooledObjectFactory<MQAdminExt> {
+    private final Logger log= LoggerFactory.getLogger(this.getClass());
 
     private MQAdminFactory mqAdminFactory;
 

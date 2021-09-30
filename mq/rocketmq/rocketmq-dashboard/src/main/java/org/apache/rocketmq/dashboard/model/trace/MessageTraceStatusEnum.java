@@ -19,12 +19,15 @@ package org.apache.rocketmq.dashboard.model.trace;
 
 import lombok.Getter;
 
-@Getter
 public enum MessageTraceStatusEnum {
     SUCCESS("success"),
     FAILED("failed"),
     UNKNOWN("unknown");
     private final String status;
+
+    public String getStatus() {
+        return status;
+    }
 
     MessageTraceStatusEnum(String status) {
         this.status = status;

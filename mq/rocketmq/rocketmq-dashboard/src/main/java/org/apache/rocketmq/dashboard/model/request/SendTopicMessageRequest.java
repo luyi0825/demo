@@ -18,11 +18,56 @@ package org.apache.rocketmq.dashboard.model.request;
 
 import lombok.Data;
 
-@Data
+
 public class SendTopicMessageRequest {
     private String topic;
     private String key;
     private String tag;
     private String messageBody;
     private boolean traceEnabled;
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public SendTopicMessageRequest setTopic(String topic) {
+        this.topic = topic;
+        return this;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public SendTopicMessageRequest setKey(String key) {
+        this.key = key;
+        return this;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public SendTopicMessageRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+
+    public String getMessageBody() {
+        return messageBody;
+    }
+
+    public SendTopicMessageRequest setMessageBody(String messageBody) {
+        this.messageBody = messageBody;
+        return this;
+    }
+
+    public boolean isTraceEnabled() {
+        return traceEnabled;
+    }
+
+    public SendTopicMessageRequest setTraceEnabled(boolean traceEnabled) {
+        this.traceEnabled = traceEnabled;
+        return this;
+    }
 }

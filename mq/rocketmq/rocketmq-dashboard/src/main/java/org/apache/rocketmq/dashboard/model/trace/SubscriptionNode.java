@@ -20,8 +20,25 @@ import lombok.Data;
 
 import java.util.List;
 
-@Data
 public class SubscriptionNode {
     private String subscriptionGroup;
     private List<TraceNode> consumeNodeList;
+
+    public String getSubscriptionGroup() {
+        return subscriptionGroup;
+    }
+
+    public SubscriptionNode setSubscriptionGroup(String subscriptionGroup) {
+        this.subscriptionGroup = subscriptionGroup;
+        return this;
+    }
+
+    public List<TraceNode> getConsumeNodeList() {
+        return consumeNodeList;
+    }
+
+    public SubscriptionNode setConsumeNodeList(List<TraceNode> consumeNodeList) {
+        this.consumeNodeList = consumeNodeList;
+        return this;
+    }
 }

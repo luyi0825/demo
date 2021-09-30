@@ -20,9 +20,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class LoginResult {
 
     private String loginUserName;
@@ -33,4 +31,40 @@ public class LoginResult {
     private int loginUserRole;
 
     private String contextPath;
+
+    public String getLoginUserName() {
+        return loginUserName;
+    }
+
+    public LoginResult setLoginUserName(String loginUserName) {
+        this.loginUserName = loginUserName;
+        return this;
+    }
+
+    public int getLoginUserRole() {
+        return loginUserRole;
+    }
+
+    public LoginResult setLoginUserRole(int loginUserRole) {
+        this.loginUserRole = loginUserRole;
+        return this;
+    }
+
+    public String getContextPath() {
+        return contextPath;
+    }
+
+    public LoginResult setContextPath(String contextPath) {
+        this.contextPath = contextPath;
+        return this;
+    }
+
+    public LoginResult() {
+    }
+
+    public LoginResult(String loginUserName, int loginUserRole, String contextPath) {
+        this.loginUserName = loginUserName;
+        this.loginUserRole = loginUserRole;
+        this.contextPath = contextPath;
+    }
 }
