@@ -1,0 +1,8 @@
+rocketmq:
+  name-server: 192.168.2.223:9876
+  consumer:
+    group: test
+  producer:
+    group: test
+server:
+  port: 8081

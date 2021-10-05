@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    function:
+      definition: source1;sink1
+    stream:
+      bindings:
+        #          destination: source1;sink1
+        source1-out-0:
+          destination: test-topic
+          content-type: application/json
+          group: test-group
+        # 定义name为input的binding
+        sink1-in-0:
+          destination: test-topic
+          content-type: application/json
+          group: test-group
+      rocketmq:
+        binder:
+          name-server: 192.168.2.223:9876

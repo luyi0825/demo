@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @author luyi
  */
@@ -23,8 +26,7 @@ public class RabbitMqConfirm {
                     System.out.println(returned.getReplyCode());
                     System.out.println(returned.getReplyText());
                 }
-               );
-
+        );
     }
 
 

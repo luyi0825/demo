@@ -17,5 +17,4 @@ public class RabbitMqUtils {
         factory.setHost("localhost");
         return factory.newConnection();
     }
-
 }
