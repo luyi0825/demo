@@ -11,6 +11,7 @@ spring:
           group: test-group
         # 定义name为input的binding
         sink1-in-0:
+
           destination: test-topic
           content-type: application/json
           group: test-group
