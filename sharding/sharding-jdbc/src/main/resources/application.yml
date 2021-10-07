@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   shardingsphere:
     datasource:
       names: m1
@@ -19,9 +21,19 @@ spring:
           actual-data-nodes: m1.t_user_$->{1..2}
           # 配置 分片算法
           table-strategy:
-            inline:
+            standard:
               sharding-column: id
-              algorithm-expression: t_user_${(id % 2)+1}
+              #
+              precise-algorithm-class-name: com.demo.shardingjdbc.MyPreciseTable
+              range-algorithm-class-name: com.demo.shardingjdbc.MyRangeTable
+#            inline:
+#              ## 分片键
+#
+#              ## 分片算法
+#              algorithm-expression: t_user_${(id % 2)+1}
+    props:
+      sql:
+        show: true
 management:
   endpoints:
     web:
