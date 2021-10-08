@@ -36,4 +36,12 @@ class UserDaoTest {
         userQueryWrapper.between("id", 1L, 1L);
         userDao.selectList(userQueryWrapper);
     }
+
+    @Test
+    public void complex() {
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.between("id", 1L, 100L);
+        userQueryWrapper.eq("username", "123");
+        userDao.selectList(userQueryWrapper);
+    }
 }
