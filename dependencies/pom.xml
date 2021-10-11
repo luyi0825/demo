@@ -32,7 +32,7 @@
         <zookeeper.version>3.7.0</zookeeper.version>
         <hutool.version>5.6.5</hutool.version>
         <nacos-client.version>1.4.2</nacos-client.version>
-        <mybaits-plus.version>3.4.3</mybaits-plus.version>
+        <mybaits-plus.version>3.4.3.4</mybaits-plus.version>
         <mysql.version>8.0.25</mysql.version>
         <elasticsearch.version>7.9.3</elasticsearch.version>
         <elasticjob.verion>3.0.0</elasticjob.verion>
