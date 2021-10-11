@@ -1,0 +1,16 @@
+dubbo:
+  application:
+    registry: nacos://180.163.98.12:8848
+  protocol:
+    name: dubbo
+    port: -1
+server:
+  port: 8006
+spring:
+  application:
+    name: dubbo-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 180.163.98.12:8848
+
