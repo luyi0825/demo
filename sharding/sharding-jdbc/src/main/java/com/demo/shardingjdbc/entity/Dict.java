@@ -15,7 +15,7 @@ public class Dict implements Serializable {
      * 数据字典的主键
      */
     @TableId
-    private int dictId;
+    private Integer dictId;
     /**
      * 编码
      */
@@ -25,11 +25,11 @@ public class Dict implements Serializable {
      */
     private String caption;
 
-    public int getDictId() {
+    public Integer getDictId() {
         return dictId;
     }
 
-    public void setDictId(int dictId) {
+    public void setDictId(Integer dictId) {
         this.dictId = dictId;
     }
 

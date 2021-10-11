@@ -1,5 +1,6 @@
 package com.demo.shardingjdbc.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -15,7 +16,7 @@ public class User implements Serializable {
     /**
      * '主键'
      */
-    @TableId
+    @TableId(type = IdType.NONE)
     private Long id;
     /**
      * 用户名

@@ -1,7 +1,6 @@
 ## key生成策略
+test: shardingkey
 spring:
-  main:
-    allow-bean-definition-overriding: true
   shardingsphere:
     datasource:
       names: m1
@@ -17,8 +16,9 @@ spring:
         t_user:
           key-generator:
             column: id
-            type: myKey
+            type: MYKEY
           actual-data-nodes: m1.t_user_$->{1..2}
+          table-strategy:
             inline:
               ## 分片键
               sharding-column: id
