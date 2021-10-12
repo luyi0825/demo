@@ -9,9 +9,10 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author luyi
  * 自定义主键生成策略
  */
-public class MyShardingKeyGenerator implements ShardingKeyGenerator {
+public final class MyShardingKeyGenerator implements ShardingKeyGenerator {
 
-    private final AtomicInteger integer = new AtomicInteger(0);
+    private  AtomicInteger integer = new AtomicInteger(0);
+    private Properties properties = new Properties();
 
     @Override
     public Comparable<?> generateKey() {
@@ -23,17 +24,17 @@ public class MyShardingKeyGenerator implements ShardingKeyGenerator {
 
     @Override
     public String getType() {
-        return "myKey";
+        return "MYKEY";
     }
 
     @Override
     public Properties getProperties() {
-        return null;
+        return properties;
     }
 
     @Override
     public void setProperties(Properties properties) {
-
+        this.properties.putAll(properties);
     }
 
 
