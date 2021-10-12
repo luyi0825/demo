@@ -1,6 +1,6 @@
 dubbo:
   application:
-    registry: nacos://180.163.98.12:8848
+    registry: spring-cloud://180.163.98.12
   protocol:
     name: dubbo
     port: -1

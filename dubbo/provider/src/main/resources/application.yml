@@ -1,9 +1,11 @@
 dubbo:
   application:
-    registry: nacos://180.163.98.12:8848
+    registry: spring-cloud://180.163.98.12:8848
   protocol:
     name: dubbo
     port: -1
+  scan:
+    base-packages: com.test.dubbo.provider
 server:
   port: 8006
 spring:

@@ -6,7 +6,7 @@ import org.apache.dubbo.config.annotation.DubboService;
 /**
  * @author luyi
  */
-@DubboService(version = "1.0.0")
+@DubboService
 public class DefaultServiceImpl implements DubboDemoService {
     @Override
     public String sayName(String name) {
