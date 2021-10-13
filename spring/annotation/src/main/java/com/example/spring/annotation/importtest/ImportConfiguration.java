@@ -10,6 +10,11 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class ImportConfiguration {
+
+    public void init() {
+        System.out.println("importConfiguration init");
+    }
+
     @ConditionalOnMissingBean
     @Bean
     public ImportService importService() {
