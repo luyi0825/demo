@@ -17,10 +17,6 @@ import java.util.Map;
 public class OpenFeignProviderStarter {
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(OpenFeignProviderStarter.class);
-        Map<String, Object> properties = new LinkedHashMap<>();
-//        //产生随机端口
-//        properties.put("server-port", -1);
-//        springApplication.setDefaultProperties(properties);
         springApplication.run(args);
     }
 }

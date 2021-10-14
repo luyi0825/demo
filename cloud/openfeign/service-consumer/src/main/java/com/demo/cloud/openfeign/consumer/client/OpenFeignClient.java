@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface OpenFeignClient {
 
     @GetMapping("/openFeignApi/sayHello")
-    void sayHello();
+    String sayHello();
 
 }

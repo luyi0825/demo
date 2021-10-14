@@ -5,3 +5,5 @@ spring:
   application:
     name: openfeign-consumer
   cloud:
+    nacos:
+      server-addr: localhost:8848
