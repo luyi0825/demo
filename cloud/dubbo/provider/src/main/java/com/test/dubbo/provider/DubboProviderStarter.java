@@ -1,19 +1,18 @@
-package com.test.dubbo.consumer;
+package com.test.dubbo.provider;
 
-import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author luyi
- * dubbo服务消费者
+ * dubbo服务提供者
  */
 @SpringBootApplication
-//@EnableDubbo(scanBasePackages = "com.test.dubbo.consumer")
+//@EnableDubbo(scanBasePackages = "com.test.dubbo.provider")
 @EnableDiscoveryClient
-public class DubboConsumerStarter {
+public class DubboProviderStarter {
     public static void main(String[] args) {
-        SpringApplication.run(DubboConsumerStarter.class, args);
+        SpringApplication.run(DubboProviderStarter.class, args);
     }
 }
