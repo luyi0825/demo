@@ -9,7 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * openfeign服务消费端
  */
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class RestTemplateProviderStarter {
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(RestTemplateProviderStarter.class);
