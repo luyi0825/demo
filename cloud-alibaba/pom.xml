@@ -13,6 +13,7 @@
         <module>openfeign</module>
         <module>dubbo</module>
         <module>resttemplate</module>
+        <module>web-client</module>
         <module>nacos-loadbalance</module>
     </modules>
 
