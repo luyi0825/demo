@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>cloud</artifactId>
+        <artifactId>cloud-alibaba</artifactId>
         <groupId>com.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -15,7 +15,8 @@
 
     <modules>
         <module>service-consumer</module>
-        <module>service-provider</module>
+        <module>service-provider-wuhan</module>
+        <module>service-provider-shanghai</module>
     </modules>
 
     <dependencies>
