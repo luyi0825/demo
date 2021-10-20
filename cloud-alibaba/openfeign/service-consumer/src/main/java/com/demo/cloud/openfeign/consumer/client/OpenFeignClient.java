@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * @author luyi
  */
-@FeignClient(name = "openfeign-provider")
+@FeignClient(name = "openfeign-provider", configuration = OpenFeignConfig.class)
 public interface OpenFeignClient {
 
     @GetMapping("/openFeignApi/sayHello")

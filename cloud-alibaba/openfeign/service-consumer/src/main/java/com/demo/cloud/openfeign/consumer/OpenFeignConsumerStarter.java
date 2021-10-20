@@ -20,6 +20,11 @@ public class OpenFeignConsumerStarter {
         springApplication.run(args);
     }
 
+    /**
+     * 全局配置
+     *
+     * @return
+     */
     @Bean
     public Logger.Level feignLoggerLevel() {
         return Logger.Level.FULL;

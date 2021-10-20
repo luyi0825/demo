@@ -9,3 +9,10 @@ spring:
       server-addr: localhost:8848
       discovery:
         cluster-name: wuhan
+logging:
+  level:
+    com.demo.cloud.openfeign.consumer.client: debug
+feign:
+  client:
+    config:
+
