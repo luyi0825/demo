@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author luyi
- * openfeignClient的接口
+ * RestTemplate的接口
  */
 @RestController
 @RequestMapping("/restTemplateApi")
@@ -14,7 +14,7 @@ public class RestTemplateApi {
 
     @GetMapping("/sayHello")
     public String sayHello() {
-        return "hello";
+        return "hello:wuhan";
     }
 
 }

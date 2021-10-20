@@ -3,6 +3,9 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
+      discovery:
+        ##集群名称，武汉
+        cluster-name: wuhan
   application:
     name: resttemplate-provider
 server:
