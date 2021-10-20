@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        ## 集群名称:上海
+        cluster-name: shanghai
+  application:
+    name: resttemplate-provider
+server:
+  port: 0

@@ -1,0 +1,11 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: webclient-consumer
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster-name: wuhan
