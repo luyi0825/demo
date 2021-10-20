@@ -14,7 +14,7 @@ public class OpenFeignApi {
 
     @GetMapping("/sayHello")
     public String sayHello() {
-        return "hello";
+        return "shanghai";
     }
 
 }

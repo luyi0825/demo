@@ -3,6 +3,8 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
+      discovery:
+        cluster-name: shanghai
   application:
     name: openfeign-provider
 server:

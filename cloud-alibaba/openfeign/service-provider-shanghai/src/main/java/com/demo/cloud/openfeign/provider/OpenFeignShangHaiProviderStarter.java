@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * openfeign服务消费端
  */
 @SpringBootApplication
-public class OpenFeignProviderStarter {
+public class OpenFeignShangHaiProviderStarter {
     public static void main(String[] args) {
-        SpringApplication springApplication = new SpringApplication(OpenFeignProviderStarter.class);
+        SpringApplication springApplication = new SpringApplication(OpenFeignShangHaiProviderStarter.class);
         springApplication.run(args);
     }
 }

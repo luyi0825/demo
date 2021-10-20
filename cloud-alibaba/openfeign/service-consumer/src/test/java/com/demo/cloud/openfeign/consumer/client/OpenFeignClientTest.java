@@ -14,8 +14,10 @@ class OpenFeignClientTest {
 
     @Test
     public void sayHello() {
-        String str = openFeignClient.sayHello();
-        System.out.println(str);
+        for (int i = 0; i < 3; i++) {
+            String str = openFeignClient.sayHello();
+            System.out.println(str);
+        }
     }
 
 

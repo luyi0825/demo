@@ -1,11 +1,11 @@
-server:
-  port: 0
 
 spring:
-  application:
-    name: openfeign-consumer
   cloud:
     nacos:
       server-addr: localhost:8848
       discovery:
         cluster-name: wuhan
+  application:
+    name: openfeign-provider
+server:
+  port: 0
