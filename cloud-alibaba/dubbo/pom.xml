@@ -15,7 +15,8 @@
     <modules>
         <module>api</module>
         <module>consumer</module>
-        <module>provider</module>
+        <module>provider-shanghai</module>
+        <module>provider-wuhan</module>
     </modules>
 
     <dependencyManagement>
