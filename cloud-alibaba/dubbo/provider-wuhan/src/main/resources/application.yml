@@ -1,0 +1,18 @@
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  scan:
+    base-packages: com.test.dubbo.provider
+  cloud:
+    subscribed-services:
+server:
+  port: 0
+spring:
+  application:
+    name: dubbo-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
