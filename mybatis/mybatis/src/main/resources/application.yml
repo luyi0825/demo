@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mybaits
+  datasource:
+    druid:
+      db-type: mysql
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: luyi123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+#mybatis:
+#  config-location: classpath*:/mapper/*.xml
