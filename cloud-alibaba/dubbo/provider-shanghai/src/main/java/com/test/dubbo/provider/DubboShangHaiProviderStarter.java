@@ -9,8 +9,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * dubbo服务提供者
  */
 @SpringBootApplication
-//@EnableDubbo(scanBasePackages = "com.test.dubbo.provider")
-@EnableDiscoveryClient
 public class DubboShangHaiProviderStarter {
     public static void main(String[] args) {
         SpringApplication.run(DubboShangHaiProviderStarter.class, args);
