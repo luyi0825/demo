@@ -12,7 +12,5 @@ spring:
 logging:
   level:
     com.demo.cloud.openfeign.consumer.client: debug
-feign:
-  client:
-    config:
+
 
