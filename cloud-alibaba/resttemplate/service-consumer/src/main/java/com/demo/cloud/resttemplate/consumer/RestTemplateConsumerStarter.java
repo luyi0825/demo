@@ -1,12 +1,9 @@
 package com.demo.cloud.resttemplate.consumer;
 
-import com.demo.could.alibaba.nacos.loadbalance.NacosClusterWeightLoadBalance;
-import com.demo.could.alibaba.nacos.loadbalance.NacosClusterWeightLoadBalanceConfig;
 import com.demo.could.alibaba.nacos.loadbalance.NacosWeightLoadBalanceConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
