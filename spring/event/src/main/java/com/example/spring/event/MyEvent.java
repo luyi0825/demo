@@ -1,8 +1,7 @@
 package com.example.spring.event;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
-import org.springframework.context.event.ApplicationContextEvent;
+
 
 /**
  * @author luyi
@@ -22,4 +21,5 @@ public class MyEvent extends ApplicationEvent {
     public void setStr(String str) {
         this.str = str;
     }
+
 }
