@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author luyi
  */
-@SpringBootApplication(scanBasePackages = "com.demo.shardingproxy.dao")
+@SpringBootApplication
 public class ShardingProxyStater {
     public static void main(String[] args) {
         SpringApplication.run(ShardingProxyStater.class, args);
