@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+    sentinel:
+      transport:
+        port: 8889
+        dashboard: localhost
+  application:
+    name: sentinel-consumer
+
+server:
+  port: 0
