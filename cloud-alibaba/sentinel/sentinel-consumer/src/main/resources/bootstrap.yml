@@ -4,8 +4,7 @@ spring:
       server-addr: localhost:8848
     sentinel:
       transport:
-        port: 8889
-        dashboard: localhost
+        dashboard: localhost:8889
   application:
     name: sentinel-consumer
 
