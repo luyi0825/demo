@@ -6,6 +6,7 @@ spring:
       server-addr: localhost:8850
       config:
         file-extension: yml
+        refresh-enabled: true
       discovery:
         weight: 2
         server-addr: localhost:8850
