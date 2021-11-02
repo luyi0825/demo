@@ -4,9 +4,15 @@ spring:
       server-addr: localhost:8848
     sentinel:
       transport:
-        dashboard: localhost:8080
+        dashboard: localhost:8889
   application:
     name: sentinel-consumer
 
 server:
   port: 0
+# 暴露actuator端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

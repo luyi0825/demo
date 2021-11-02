@@ -1,6 +1,8 @@
 package com.demo.sentinel.consumer;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConsumerController {
 
+    @Autowired
+    private ProviderFeign providerFeign;
+
     @GetMapping("/test")
     @SentinelResource(value = "test", fallbackClass = FallBack.class, fallback = "back")
     public String test() {
@@ -18,7 +23,7 @@ public class ConsumerController {
 
     @GetMapping("/sayHello")
     public String sayHello() {
-        return "hello";
+        return providerFeign.sayHello();
     }
 
 }

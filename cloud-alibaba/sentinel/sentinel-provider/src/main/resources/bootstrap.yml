@@ -10,3 +10,11 @@ spring:
 
 server:
   port: 0
+
+
+# 暴露actuator端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
