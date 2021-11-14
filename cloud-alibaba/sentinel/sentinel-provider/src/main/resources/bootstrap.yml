@@ -9,7 +9,7 @@ spring:
     name: sentinel-provider
 
 server:
-  port: 0
+  port: 9999
 
 
 # 暴露actuator端点

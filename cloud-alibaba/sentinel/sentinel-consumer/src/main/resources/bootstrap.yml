@@ -5,6 +5,7 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8889
+      eager: true
   application:
     name: sentinel-consumer
 
