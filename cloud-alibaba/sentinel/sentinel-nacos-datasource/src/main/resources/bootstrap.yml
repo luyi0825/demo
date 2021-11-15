@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8889
+      datasource:
+         test:
+           nacos:
+             serverAddr: localhost:8848
+             groupId: "DEFAULT_GROUP"
+             dataId: ${spring.application.name}-rule
+             namespace: 'public'
+             ruleType: flow
+  application:
+    name: sentinel-provider
+
+server:
+  port: 10000
+
+
+# 暴露actuator端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

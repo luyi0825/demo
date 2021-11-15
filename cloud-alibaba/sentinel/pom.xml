@@ -15,6 +15,7 @@
     <modules>
         <module>sentinel-consumer</module>
         <module>sentinel-provider</module>
+        <module>sentinel-nacos-datasource</module>
     </modules>
 
     <dependencies>
