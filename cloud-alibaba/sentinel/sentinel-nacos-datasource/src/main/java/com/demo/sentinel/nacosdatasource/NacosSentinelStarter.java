@@ -5,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author luyi
- * sentinel服务提供者启动类
+ * nacos-sentinel服务启动类-利用nacos做持久化
  */
 @SpringBootApplication
-public class SentinelProviderStarter {
+public class NacosSentinelStarter {
     public static void main(String[] args) {
-        SpringApplication.run(SentinelProviderStarter.class, args);
+        SpringApplication.run(NacosSentinelStarter.class, args);
     }
 
 

@@ -9,15 +9,16 @@ spring:
          test:
            nacos:
              serverAddr: localhost:8848
-             groupId: "DEFAULT_GROUP"
+             groupId: DEFAULT_GROUP
              dataId: ${spring.application.name}-rule
-             namespace: 'public'
+             namespace: public
              ruleType: flow
+             dataType: json
   application:
-    name: sentinel-provider
+    name: sentinelNacos
 
 server:
-  port: 10000
+  port: 9998
 
 
 # 暴露actuator端点
