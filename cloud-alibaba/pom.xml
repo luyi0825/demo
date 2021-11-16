@@ -21,6 +21,7 @@
         <module>nacos-loadbalance</module>
         <module>nacos-config</module>
         <module>sentinel</module>
+        <module>oauth2</module>
     </modules>
 
 
