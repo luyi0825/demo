@@ -1,0 +1,14 @@
+redis-host: 192.168.3.222
+#spring:
+#  redis:
+#    cluster:
+#      nodes: 127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003,127.0.0.1:8004,127.0.0.1:8005,127.0.0.1:8006
+customize:
+  redis:
+    redisson:
+      config:
+        clusterServersConfig:
+          nodeAddresses: redis://${redis-host}:8001, redis://${redis-host}:8002, redis://${vm-host}:8003
+
+
+
