@@ -17,7 +17,7 @@
     </dependencies>
 
     <modules>
-        <module>boot</module>
+        <module>rocketmq-boot</module>
         <module>rocketmq-dashboard</module>
         <module>simple-example</module>
         <module>stream</module>

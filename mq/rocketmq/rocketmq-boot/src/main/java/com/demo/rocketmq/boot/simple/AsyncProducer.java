@@ -1,24 +1,24 @@
-package com.demo.rocketmq.boot.consumer.simple;
+package com.demo.rocketmq.boot.simple;
 
-import org.apache.rocketmq.common.message.Message;
+
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.nio.charset.StandardCharsets;
+
 
 /**
  * @author luyi
+ * 同步发送消息
  */
 @Component
-public class SimpleProduct {
+public class AsyncProducer {
 
     @Autowired
     private RocketMQTemplate rocketMqTemplate;
 
-
     public void send() {
-       String message="tes22t";
-        rocketMqTemplate.convertAndSend("springBoot", message);
+        rocketMqTemplate.convertAndSend("test async message");
     }
+
 }

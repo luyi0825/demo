@@ -1,5 +1,5 @@
 rocketmq:
-  name-server: 192.168.2.223:9876
+  name-server: 127.0.0.1:9876
   consumer:
     group: test
   producer:
