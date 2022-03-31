@@ -15,8 +15,10 @@ public class SpringTransactionStart {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringTransactionStart.class);
         TransactionService aopService = (TransactionService) context.getBean("transactionService");
-        //aopService.sayGood();
-        aopService.addOrder(1);
+
+        //aopService.addOrder(1);
+        //aopService.testPrivate();
+        aopService.testPublic();
     }
 
 
