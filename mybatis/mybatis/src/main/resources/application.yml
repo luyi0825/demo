@@ -9,5 +9,5 @@ spring:
       password: luyi123
       driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-#mybatis:
-#  config-location: classpath*:/mapper/*.xml
+mybatis:
+  mapper-location: classPath*:/mapper/**/*.xml
