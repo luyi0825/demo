@@ -1,5 +1,6 @@
 package com.demo.rocketmq.boot.consumer.simple;
 
+import com.demo.rocketmq.boot.simple.SimpleProduct;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

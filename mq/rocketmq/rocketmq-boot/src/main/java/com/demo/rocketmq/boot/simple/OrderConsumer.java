@@ -1,4 +1,4 @@
-package com.demo.rocketmq.boot.consumer.simple;
+package com.demo.rocketmq.boot.simple;
 
 import org.apache.rocketmq.spring.annotation.ConsumeMode;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
