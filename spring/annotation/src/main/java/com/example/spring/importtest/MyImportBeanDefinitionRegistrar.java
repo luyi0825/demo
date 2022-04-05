@@ -1,4 +1,4 @@
-package com.example.spring.annotation.importtest;
+package com.example.spring.importtest;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;

@@ -1,6 +1,5 @@
-package com.example.spring.annotation.importtest;
+package com.example.spring.importtest;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,7 +14,7 @@ public class ImportConfiguration {
         System.out.println("importConfiguration init");
     }
 
-    @ConditionalOnMissingBean
+   // @ConditionalOnMissingBean
     @Bean
     public ImportService importService() {
         return new DefaultImportServiceImpl();

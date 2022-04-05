@@ -1,4 +1,4 @@
-package com.example.spring.annotation.importtest;
+package com.example.spring.importtest;
 
 import org.springframework.context.annotation.DeferredImportSelector;
 import org.springframework.core.type.AnnotationMetadata;

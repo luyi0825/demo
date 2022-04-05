@@ -12,9 +12,10 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan(basePackages = "com.example.spring.aop")
 public class SpringAopStart {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(SpringAopStart.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringAopStart.class);
+        //context.scan();
         AopService aopService = (AopService) context.getBean("aopService");
-        //aopService.sayGood();
+        aopService.sayGood();
         aopService.test();
     }
 
