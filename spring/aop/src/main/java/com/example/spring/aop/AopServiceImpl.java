@@ -13,6 +13,6 @@ public class AopServiceImpl implements AopService {
 
     @Override
     public void test() {
-        sayGood();
+        System.out.println("test");
     }
 }

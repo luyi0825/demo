@@ -1,5 +1,6 @@
 package com.demo.shardingjdbc;
 
+import com.demo.model.dao.UserDao;
 import com.demo.shardingjdbc.dao.UserDao;
 import com.demo.shardingjdbc.entity.User;
 import org.mybatis.spring.annotation.MapperScan;

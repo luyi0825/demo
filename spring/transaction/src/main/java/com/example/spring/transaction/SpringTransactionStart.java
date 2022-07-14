@@ -19,8 +19,8 @@ public class SpringTransactionStart {
         //aopService.addOrder(1);
         //aopService.testPrivate();
         aopService.testPublic();
-    }
 
+    }
 
 
 }

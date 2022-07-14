@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.util.UUID;
 
 /**
@@ -18,7 +19,7 @@ public class MvcStart {
     }
 
     @GetMapping("/test")
-    public String test() {
+    public String test(HttpSession session) {
         return UUID.randomUUID().toString();
     }
 
