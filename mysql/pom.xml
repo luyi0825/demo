@@ -10,6 +10,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>canal</module>
+        <module>dynamic-datasource</module>
+        <module>dynamic-datasouce-starter</module>
     </modules>
 
     <dependencyManagement>
