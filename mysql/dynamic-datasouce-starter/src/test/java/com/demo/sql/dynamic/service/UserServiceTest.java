@@ -1,9 +1,12 @@
 package com.demo.sql.dynamic.service;
 
+import com.demo.sql.dynamic.datasource.DataSourceKeyHolder;
+import com.demo.sql.dynamic.entity.UserEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 
 @SpringBootTest
 class UserServiceTest {
@@ -13,7 +16,12 @@ class UserServiceTest {
 
     @Test
     public void insert() {
-        userService.insert(null);
+        DataSourceKeyHolder.set("test1");
+        UserEntity userEntity = new UserEntity();
+        String uuid = UUID.randomUUID().toString();
+        userEntity.setUsername(uuid);
+        userEntity.setPassword(uuid);
+        userService.insert(userEntity);
     }
 
 }

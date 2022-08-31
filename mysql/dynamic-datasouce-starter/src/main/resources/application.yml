@@ -2,12 +2,22 @@ spring:
   datasource:
     dynamic:
       datasource:
-        master:
+        test1_master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://10.0.3.5:36895/maker_dev?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&allowMultiQueries=true&autoReconnect=true
+          username: maker_dev
+          password: O9WBzQDYczhJIstg
+        test2_master:
           driver-class-name: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://10.0.3.5:36895/maker_test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&allowMultiQueries=true&autoReconnect=true
           username: maker_dev
           password: O9WBzQDYczhJIstg
-        test2_master:
+        test2_slave_1:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://10.0.3.5:36895/maker_test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&allowMultiQueries=true&autoReconnect=true
+          username: maker_dev
+          password: O9WBzQDYczhJIstg
+        test2_slave_2:
           driver-class-name: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://10.0.3.5:36895/maker_test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&allowMultiQueries=true&autoReconnect=true
           username: maker_dev

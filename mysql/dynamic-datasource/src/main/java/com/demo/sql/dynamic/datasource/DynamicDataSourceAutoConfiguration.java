@@ -1,6 +1,6 @@
 package com.demo.sql.dynamic.datasource;
 
-import com.baomidou.dynamic.datasource.DynamicRoutingDataSource;
+
 import com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor;
 import com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationInterceptor;
 import com.baomidou.dynamic.datasource.processor.DsHeaderProcessor;
@@ -30,9 +30,21 @@ import java.util.Map;
 public class DynamicDataSourceAutoConfiguration {
 
 
+
+
     @Bean
-    public DsProcessor dsProcessor() {
-        return new DynamicDsProcessor();
+    public DataSource dataSource(DynamicDataSourceProperties properties,DynamicDataSourceProvider dynamicDataSourceProvider) {
+        DynamicRoutingDataSource dataSource = new DynamicRoutingDataSource();
+        dataSource.setPrimary(properties.getPrimary());
+        dataSource.setStrict(properties.getStrict());
+        dataSource.setStrategy(properties.getStrategy());
+        dataSource.setProvider(dynamicDataSourceProvider);
+        dataSource.setP6spy(properties.getP6spy());
+        dataSource.setSeata(properties.getSeata());
+        return dataSource;
     }
+
+
+
 
 }
