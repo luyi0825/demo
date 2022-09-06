@@ -1,16 +1,18 @@
 package com.demo.shardingjdbc.dao;
 
-import com.demo.shardingjdbc.entity.Dict;
+import com.demo.model.dao.DictDao;
+import com.demo.model.entity.Dict;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 
 @SpringBootTest
 class DictDaoTest {
-    @Autowired
+    @Resource
     private DictDao dictDao;
 
     /**

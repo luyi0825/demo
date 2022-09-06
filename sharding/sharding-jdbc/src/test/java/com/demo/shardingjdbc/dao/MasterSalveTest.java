@@ -1,7 +1,8 @@
 package com.demo.shardingjdbc.dao;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.demo.shardingjdbc.entity.User;
+import com.demo.model.dao.UserDao;
+import com.demo.model.entity.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

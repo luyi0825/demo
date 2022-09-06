@@ -1,14 +1,14 @@
 package com.demo.shardingjdbc;
 
-import com.demo.shardingjdbc.dao.UserDao;
-import com.demo.shardingjdbc.entity.User;
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import com.demo.model.dao.UserDao;
+import com.demo.model.entity.User;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 /**
@@ -23,7 +23,7 @@ public class ShardingJdbcStater implements ApplicationRunner {
         SpringApplication.run(ShardingJdbcStater.class, args);
     }
 
-    @Autowired
+    @Resource
     private UserDao userDao;
 
     @Override

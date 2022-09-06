@@ -1,14 +1,14 @@
 package com.demo.shardingproxy.dao;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.demo.shardingproxy.dao.UserDao;
-import com.demo.shardingproxy.entity.User;
+import com.demo.model.dao.UserDao;
+import com.demo.model.entity.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 /**
@@ -19,7 +19,7 @@ import java.util.UUID;
 //@ActiveProfiles("masterslave2")
 public class MasterSalveTest {
 
-    @Autowired
+    @Resource
     private UserDao userDao;
 
     @Test

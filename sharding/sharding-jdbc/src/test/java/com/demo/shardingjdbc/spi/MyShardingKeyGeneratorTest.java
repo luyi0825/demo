@@ -1,19 +1,21 @@
 package com.demo.shardingjdbc.spi;
 
-import com.demo.shardingjdbc.dao.UserDao;
-import com.demo.shardingjdbc.entity.User;
+
+import com.demo.model.dao.UserDao;
+import com.demo.model.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 @SpringBootTest
 @ActiveProfiles("shardingkey")
 class MyShardingKeyGeneratorTest {
-    @Autowired
+    @Resource
     private UserDao userDao;
 
     @Value("${test}")

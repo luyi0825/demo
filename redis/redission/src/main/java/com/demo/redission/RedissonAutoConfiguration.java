@@ -2,11 +2,6 @@
 package com.demo.redission;
 
 
-import io.github.architers.cache.lock.LockService;
-import io.github.architers.cache.redis.RedisCacheManager;
-import io.github.architers.cache.redis.RedisMapValueService;
-import io.github.architers.cache.redis.RedisSimpleValueService;
-import io.github.architers.cache.redisson.support.RedisLockServiceImpl;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.codec.JsonJacksonCodec;
@@ -17,7 +12,6 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Role;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -32,7 +26,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @author luyi
  */
 @Configuration
-@ComponentScan("io.github.architers.cache.redisson")
 @EnableConfigurationProperties(RedissonProperties.class)
 public class RedissonAutoConfiguration {
     @Autowired
@@ -92,29 +85,5 @@ public class RedissonAutoConfiguration {
         return new GenericJackson2JsonRedisSerializer();
     }
 
-    @Bean
-    @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-    public RedisSimpleValueService redisValueService(RedisTemplate<Object, Object> redisTemplate) {
-        return new RedisSimpleValueService(redisTemplate);
-    }
-
-    @Bean
-    @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-    public RedisMapValueService redisMapValueService(RedisTemplate<Object, Object> redisTemplate) {
-        return new RedisMapValueService(redisTemplate);
-    }
-
-    @Bean
-    @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-    public RedisCacheManager redisCacheManager(RedisSimpleValueService redisSimpleValueService,
-                                               RedisMapValueService redisMapValueService) {
-        return new RedisCacheManager(redisSimpleValueService, redisMapValueService);
-    }
-
-
-    @Bean("redisLock")
-    public LockService lockService(RedissonClient redissonClient) {
-        return new RedisLockServiceImpl(redissonClient);
-    }
 
 }
