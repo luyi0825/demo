@@ -1,21 +1,36 @@
 package com.test.mybatis.batch.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
- * 
  * @TableName t_user
  */
+@TableName("t_user")
+@Data
 public class TUser implements Serializable {
     /**
      * 主键
      */
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
      * 名称
      */
     private String name;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    private Integer age;
+
 
     private static final long serialVersionUID = 1L;
 
@@ -60,7 +75,7 @@ public class TUser implements Serializable {
         }
         TUser other = (TUser) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()));
+                && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()));
     }
 
     @Override
