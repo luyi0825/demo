@@ -2,14 +2,13 @@ package com.test.jvm.thread;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class Test {
 
     public static void main(String[] args) {
+
+        new Thread().start();
         System.out.println("开始时间：" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(5);
         scheduledThreadPoolExecutor.schedule(new MyTask(), 5, TimeUnit.SECONDS);
