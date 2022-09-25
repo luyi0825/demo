@@ -13,6 +13,7 @@ public class Piped {
         // 将输出流和输入流进行连接，否则在使用时会抛出IOException
         out.connect(in);
         Thread printThread = new Thread(new Print(in), "PrintThread");
+        printThread.join();
         printThread.start();
         new Thread(new Runnable() {
             @Override
