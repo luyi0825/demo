@@ -23,7 +23,7 @@ public class TUserServiceTest {
     @Test
     public void batchInsert() {
         List<TUser> userList = new ArrayList<>();
-        int size = 100_000;
+        int size = 1000_000;
         for (int i = 0; i < size; i++) {
             TUser tUser = new TUser();
             tUser.setName(UUID.randomUUID().toString());

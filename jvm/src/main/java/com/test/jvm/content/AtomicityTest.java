@@ -1,7 +1,5 @@
 package com.test.jvm.content;
 
-import org.junit.jupiter.api.Test;
-
 /**
  * 原子性测试
  *
