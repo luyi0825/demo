@@ -1,4 +1,4 @@
-package com.test.jvm.thread;
+package com.test.jvm.juc.aqs;
 
 import java.util.concurrent.locks.ReentrantLock;
 
