@@ -1,4 +1,4 @@
-package com.example.spring.importtest;
+package com.example.spring.importselector;
 
 /**
  * @author luyi

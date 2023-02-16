@@ -1,4 +1,4 @@
-package com.example.spring.importtest;
+package com.example.spring.importselector;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;

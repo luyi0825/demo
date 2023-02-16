@@ -1,9 +1,9 @@
-package com.example.spring.importtest;
+package com.example.spring.importselector;
 
-import org.springframework.context.annotation.ImportSelector;
+import org.springframework.context.annotation.DeferredImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 
-public class MyImportSeletor implements ImportSelector {
+public class MyDeferredImportSeletor implements DeferredImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
         return new String[]{ImportConfiguration.class.getName()};
