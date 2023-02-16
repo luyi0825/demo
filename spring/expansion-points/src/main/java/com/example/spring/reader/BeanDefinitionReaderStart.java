@@ -1,6 +1,5 @@
 package com.example.spring.reader;
 
-import com.example.spring.SpringConfigStart;
 import org.springframework.context.annotation.*;
 
 

@@ -13,7 +13,7 @@
         <module>event</module>
         <module>mvc</module>
         <module>transaction</module>
-        <module>annotation</module>
+        <module>expansion-points</module>
         <module>message</module>
     </modules>
 
