@@ -16,9 +16,5 @@ public class ImportConfiguration {
         System.out.println("importConfiguration init");
     }
 
-   // @ConditionalOnMissingBean
-    @Bean
-    public ImportService importService() {
-        return new DefaultImportServiceImpl();
-    }
+
 }
