@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 public class MyImportSelector implements ImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        System.out.println("MyImportSelector");
+        System.out.println("MyImportSelector->selectImports");
         return new String[]{MyImportSelectorBean.class.getName()};
     }
 
-    class MyImportSelectorBean {
+   public static class MyImportSelectorBean {
 
         MyImportSelectorBean() {
             System.out.println("MyImportSelectorBean init");
