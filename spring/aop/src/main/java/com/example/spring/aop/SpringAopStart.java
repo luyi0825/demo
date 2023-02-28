@@ -23,6 +23,7 @@ public class SpringAopStart {
         AopService aopService = (AopService) context.getBean("aopService");
         aopService.sayGood();
         aopService.test();
+        context.getMessage()
 
         AopService aopService2 = (AopService) context.getBean("aopService2");
         aopService2.sayGood();
