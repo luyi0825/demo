@@ -3,7 +3,7 @@ package com.example.spring.typeconvert;
 import java.beans.PropertyEditor;
 import java.beans.PropertyEditorSupport;
 
-public class StringToUserPropertyEditor  extends PropertyEditorSupport implements PropertyEditor {
+public class StringToUserPropertyEditor1 extends PropertyEditorSupport implements PropertyEditor {
 
     @Override
     public void setAsText(String text) throws IllegalArgumentException {

@@ -19,7 +19,7 @@ public class MyBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegi
         BeanDefinition beanDefinition = new GenericBeanDefinition();
         beanDefinition.setLazyInit(false);
         beanDefinition.setBeanClassName(MyBeanDefinitionRegistryPostProcessorBean.class.getName());
-        registry.registerBeanDefinition("MyBeanDefinitionRegistryPostProcessorBean",beanDefinition);
+        registry.registerBeanDefinition("MyBeanDefinitionRegistryPostProcessorBean", beanDefinition);
     }
 
     @Override
@@ -27,8 +27,8 @@ public class MyBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegi
 
     }
 
-    class MyBeanDefinitionRegistryPostProcessorBean{
-        MyBeanDefinitionRegistryPostProcessorBean(){
+    class MyBeanDefinitionRegistryPostProcessorBean {
+        MyBeanDefinitionRegistryPostProcessorBean() {
             System.out.println("MyBeanDefinitionRegistryPostProcessorBean init");
         }
     }
