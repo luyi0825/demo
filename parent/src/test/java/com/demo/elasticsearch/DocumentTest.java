@@ -9,9 +9,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.UUID;
+import java.util.concurrent.Executors;
 
 @SpringBootTest
 public class DocumentTest {
+
+    public static void main(String[] args) {
+        Executors.newSingleThreadExecutor().execute(()->{
+            System.out.println(1/0);
+        });
+    }
 
     @Resource
     private ElasticsearchClient elasticsearchClient;
