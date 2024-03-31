@@ -1,6 +1,8 @@
 package com.demo.elasticsearch;
 
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
+import co.elastic.clients.elasticsearch._types.query_dsl.IdsQuery;
+import co.elastic.clients.elasticsearch._types.query_dsl.Query;
 import co.elastic.clients.elasticsearch.core.*;
 import com.demo.elasticsearch.entity.Product;
 import org.junit.jupiter.api.Test;
@@ -14,11 +16,6 @@ import java.util.concurrent.Executors;
 @SpringBootTest
 public class DocumentTest {
 
-    public static void main(String[] args) {
-        Executors.newSingleThreadExecutor().execute(()->{
-            System.out.println(1/0);
-        });
-    }
 
     @Resource
     private ElasticsearchClient elasticsearchClient;
@@ -43,6 +40,7 @@ public class DocumentTest {
         Product product = new Product();
         product.setProductCode("1");
         product.setProductName("productName" + product.getProductCode());
+        product.setRemark("remark" + 1);
         CreateRequest<Product> indexRequest = new CreateRequest.Builder<Product>().index(index).id(product.getProductCode()).document(product).build();
         CreateResponse createResponse = elasticsearchClient.create(indexRequest);
         System.out.println(createResponse);
@@ -61,16 +59,70 @@ public class DocumentTest {
         }
     }
 
+    /**
+     * 相当于部分更新_update
+     *
+     * @throws IOException
+     */
     @Test
-    public void updateDocument() throws IOException {
+    public void updateDocument1() throws IOException {
         String id = "1";
         Product product = new Product();
         product.setProductCode(id);
         product.setProductName("update_productName" + id);
+
         UpdateRequest<Product, Product> updateRequest = new UpdateRequest.Builder<Product, Product>().index(index).id(id).doc(product).build();
         UpdateResponse<Product> updateResponse = elasticsearchClient.update(updateRequest, Product.class);
         System.out.println(updateResponse);
     }
+
+    /**
+     * 相当于部分更新_update
+     *
+     * @throws IOException
+     */
+    @Test
+    public void updateDocumentByVersion() throws IOException {
+        String id = "1";
+        Product product = new Product();
+        product.setProductCode(id);
+        product.setProductName("update_productName" + id);
+
+        UpdateRequest<Product, Product> updateRequest = new UpdateRequest.Builder<Product, Product>().index(index).id(id).doc(product).ifSeqNo(0L).ifPrimaryTerm(1L).build();
+        UpdateResponse<Product> updateResponse = elasticsearchClient.update(updateRequest, Product.class);
+        System.out.println(updateResponse);
+    }
+
+    /**
+     * 相当于PUT(全量更新）
+     */
+    @Test
+    public void updateDocumentAll() throws IOException {
+        String id = "1";
+        Product product = new Product();
+        product.setProductCode(id);
+        product.setProductName("update_productName" + id);
+        IndexResponse indexResponse = elasticsearchClient.index(e -> e.index(index).id(id).document(product));
+        System.out.println(indexResponse);
+    }
+
+    /**
+     * updateByQuery---部分更新
+     */
+    @Test
+    public void updateByQuery() throws IOException {
+        String id = "1";
+        Product product = new Product();
+        product.setProductCode(id);
+        product.setProductName("updateByQuery" + id);
+
+        UpdateByQueryRequest updateByQueryRequest = new UpdateByQueryRequest.Builder().index(index).maxDocs(1L)
+                .query(new Query.Builder().ids(new IdsQuery.Builder().values("1").build()).build()).build();
+
+        UpdateByQueryResponse updateResponse = elasticsearchClient.updateByQuery(updateByQueryRequest);
+        System.out.println(updateResponse);
+    }
+
 
     /**
      * 删除文档

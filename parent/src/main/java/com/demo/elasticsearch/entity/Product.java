@@ -15,5 +15,10 @@ public class Product implements Serializable {
 
     private String productCode;
 
+    /**
+     * 备注
+     */
+    private String remark;
+
 
 }
