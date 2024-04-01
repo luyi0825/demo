@@ -16,7 +16,7 @@ public class IndexTest {
     @Resource
     private ElasticsearchClient elasticsearchClient;
 
-    private String index = "products";
+    private final String index = "products";
 
     /**
      * 创建索引

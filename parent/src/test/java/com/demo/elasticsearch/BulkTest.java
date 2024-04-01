@@ -59,6 +59,7 @@ public class BulkTest {
             }
         }
     }
+
     @Test
 
     public void update() throws IOException {
@@ -69,7 +70,7 @@ public class BulkTest {
 
         BulkRequest.Builder br = new BulkRequest.Builder();
 
-        UpdateOperation<Product,Product> updateOperation=  new UpdateOperation.Builder<Product,Product>().index("products").id("1").action(new UpdateAction.Builder<Product,Product>().doc(product).build()).build();
+        UpdateOperation<Product, Product> updateOperation = new UpdateOperation.Builder<Product, Product>().index("products").id("1").action(new UpdateAction.Builder<Product, Product>().doc(product).build()).build();
         br.operations(new BulkOperation.Builder().update(updateOperation).build());
 
         BulkResponse result = client.bulk(br.build());
@@ -82,6 +83,26 @@ public class BulkTest {
             }
         }
     }
+
+    /**
+     * bulk删除操作
+     */
+    @Test
+    public void delete() throws IOException {
+        BulkRequest.Builder br = new BulkRequest.Builder();
+        DeleteOperation deleteOperation = new DeleteOperation.Builder().id("1").index("products").build();
+        br.operations(new BulkOperation.Builder().delete(deleteOperation).build());
+        BulkResponse result = client.bulk(br.build());
+        if (result.errors()) {
+            log.error("Bulk had errors");
+            for (BulkResponseItem item : result.items()) {
+                if (item.error() != null) {
+                    log.error(item.error().reason());
+                }
+            }
+        }
+    }
+
 
     @Test
     public void testBulk() throws IOException {
@@ -113,7 +134,6 @@ public class BulkTest {
     }
 
 
-
     private List<Product> fetchProducts() {
 
 
@@ -125,7 +145,5 @@ public class BulkTest {
             products.add(product);
         }
         return products;
-
-
     }
 }
