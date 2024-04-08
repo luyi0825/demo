@@ -113,7 +113,7 @@ public class BulkTest {
         for (Product product : products) {
             br.operations(op -> op
                     .index(idx -> idx
-                            .index("products" + (int) (Math.random() * 100))
+                            .index("products")
                             .id(product.getProductCode())
                             .document(product)
                     )
